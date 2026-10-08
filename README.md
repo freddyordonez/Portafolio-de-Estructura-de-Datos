@@ -30,7 +30,6 @@
 ### 👩‍🎓 **Estudiantes:**
 ### *Yimmy Onner Angulo Torres*
 ### *Richard Santiago Guaman Sanchez*
-### *Joaquin Emilio Moscol Castillo*
 ### *Freddy Alexander Ordoñez Gonzalez*
 ### *Erick Jahirs Rogel Baque*
 
