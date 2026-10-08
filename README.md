@@ -31,6 +31,7 @@
 ### *Yimmy Onner Angulo Torres*
 ### *Richard Santiago Guaman Sanchez*
 ### *Freddy Alexander Ordoñez Gonzalez*
+### *Joaquin Emilio Moscol Castillo*
 ### *Erick Jahirs Rogel Baque*
 
 <br>
