@@ -1,4 +1,5 @@
-const { getMemoryUsage } = require('./profiler.js');
+const { getMemoryUsage } = require('./profiler');
+
 const N = 1000000; // 1 millón de registros
 const memoriaInicial = getMemoryUsage();
 
