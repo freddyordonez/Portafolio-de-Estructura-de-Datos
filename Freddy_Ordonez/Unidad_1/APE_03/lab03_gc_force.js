@@ -16,7 +16,7 @@ function procesarCoordenada() {
     historialSatelitalGlobal.push(paquete);
 }
 
-// Monitoreo y intento de limpieza cada 100 iteraciones
+// Monitoreo de la memoria Heap cada 100 iteraciones
 for (let i = 1; i <= 500; i++) {
     procesarCoordenada();
 
