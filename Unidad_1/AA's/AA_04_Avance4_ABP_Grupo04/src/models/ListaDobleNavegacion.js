@@ -98,6 +98,19 @@ class ListaDobleNavegacion {
     this.longitud--;
     return true;
   }
+
+  /**
+   * Vacía completamente la lista navegable y resetea los punteros.
+   * Complejidad Temporal: O(1)
+   * @returns {boolean} Confirmación de vaciado.
+   */
+  vaciar() {
+    this.cabeza = null;
+    this.cola = null;
+    this.actual = null;
+    this.longitud = 0;
+    return true;
+  }
 }
 
 module.exports = ListaDobleNavegacion;
