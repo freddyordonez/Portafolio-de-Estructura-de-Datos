@@ -98,6 +98,29 @@ class ListaDobleNavegacion {
     this.longitud--;
     return true;
   }
+  insertarDespuesDeActual(dato) {
+  if (!this.actual) {
+    return this.insertar(dato);
+  }
+
+  const nuevoNodo = new NodoDoble(dato);
+  const siguiente = this.actual.siguiente;
+
+  nuevoNodo.anterior = this.actual;
+  nuevoNodo.siguiente = siguiente;
+
+  this.actual.siguiente = nuevoNodo;
+
+  if (siguiente) {
+    siguiente.anterior = nuevoNodo;
+  } else {
+    this.cola = nuevoNodo;
+  }
+
+  this.longitud++;
+
+  return nuevoNodo;
+}
 }
 
 module.exports = ListaDobleNavegacion;
