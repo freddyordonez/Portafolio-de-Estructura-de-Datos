@@ -8,7 +8,7 @@ Este directorio contiene la documentación oficial y el análisis técnico corre
 
 <div align="center">
 
-[![Ver Documento PDF](https://img.shields.io/badge/📖_Ver_Documento_PDF-Hacer_Clic_Aquí-blue?style=for-the-badge&logo=adobeacrobatreader)](./AA_01_Grupo04.pdf)
+[![Ver Documento PDF](https://img.shields.io/badge/📖_Ver_Documento_PDF-Hacer_Clic_Aquí-blue?style=for-the-badge&logo=adobeacrobatreader)](./AA_01_Grupo4.pdf)
 
 *Para mayor información, ingresar al PDF documentado y completo.*
 
