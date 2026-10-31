@@ -45,8 +45,7 @@ function iniciarSistema() {
   console.log('Siguiente destino:', historialBusqueda.avanzar());
   
   // Intento de superar el límite superior
-  conso
-  le.log('Intento de avance adicional (debe ser null):', historialBusqueda.avanzar());
+  console.log('Intento de avance adicional (debe ser null):', historialBusqueda.avanzar());
 
   console.log('\n--- Probando Navegación hacia Atrás (Retroceder) ---');
   console.log('Destino anterior:', historialBusqueda.retroceder());
