@@ -1,4 +1,4 @@
-const NodoDoble = require('./NodoDoble');
+﻿const NodoDoble = require('./NodoDoble');
 
 /**
  * Estructura de datos dinámica para la gestión de navegación bidireccional.
@@ -75,14 +75,12 @@ class ListaDobleNavegacion {
 
     const nodoAEliminar = this.actual;
 
-    // Reconexión del enlace anterior
     if (nodoAEliminar.anterior) {
       nodoAEliminar.anterior.siguiente = nodoAEliminar.siguiente;
     } else {
       this.cabeza = nodoAEliminar.siguiente;
     }
 
-    // Reconexión del enlace siguiente
     if (nodoAEliminar.siguiente) {
       nodoAEliminar.siguiente.anterior = nodoAEliminar.anterior;
       this.actual = nodoAEliminar.siguiente;
@@ -91,36 +89,38 @@ class ListaDobleNavegacion {
       this.actual = nodoAEliminar.anterior;
     }
 
-    // Limpieza explícita de referencias (Garbage Collection Helper)
     nodoAEliminar.siguiente = null;
     nodoAEliminar.anterior = null;
 
     this.longitud--;
     return true;
   }
-  insertarDespuesDeActual(dato) {
-  if (!this.actual) {
-    return this.insertar(dato);
+
+  /**
+   * Busca un elemento en la lista por su ID.
+   * @param {number} id - ID del elemento a buscar.
+   * @returns {Object|null} El dato encontrado o null si no existe.
+   */
+  buscarPorId(id) {
+    let actual = this.cabeza;
+    while (actual) {
+      if (actual.dato && actual.dato.id === id) {
+        return actual.dato;
+      }
+      actual = actual.siguiente;
+    }
+    return null;
   }
 
-  const nuevoNodo = new NodoDoble(dato);
-  const siguiente = this.actual.siguiente;
-
-  nuevoNodo.anterior = this.actual;
-  nuevoNodo.siguiente = siguiente;
-
-  this.actual.siguiente = nuevoNodo;
-
-  if (siguiente) {
-    siguiente.anterior = nuevoNodo;
-  } else {
-    this.cola = nuevoNodo;
+  /**
+   * Vacía la lista por completo reiniciando sus punteros y longitud.
+   */
+  vaciar() {
+    this.cabeza = null;
+    this.cola = null;
+    this.actual = null;
+    this.longitud = 0;
   }
-
-  this.longitud++;
-
-  return nuevoNodo;
-}
 }
 
 module.exports = ListaDobleNavegacion;
