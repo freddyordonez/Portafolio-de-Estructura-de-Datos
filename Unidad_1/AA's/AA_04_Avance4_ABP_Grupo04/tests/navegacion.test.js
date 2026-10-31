@@ -48,17 +48,25 @@ describe('Pruebas Unitarias - Navegación Bidireccional (Avance 4 ABP)', () => {
     assert.equal(listaVacia.retroceder(), null);
     assert.equal(listaVacia.eliminarActual(), false);
   });
-  test('6. Inserción después del cursor actual', () => {
+  test('6. Inserción después del cursor actual: debe insertar un nodo en el medio y reconectar los enlaces', () => {
   lista.avanzar(); // Cursor en 102
 
-  lista.insertarDespuesDeActual({
-    id: 150,
-    accion: 'Nueva Acción'
-  });
+  const nuevo = lista.insertarDespuesDeActual({ id: 150, accion: 'Nueva Accion Intermedia' });
 
+  // Verificamos que se insertó correctamente
   assert.equal(lista.longitud, 4);
+  assert.equal(nuevo.dato.id, 150);
+
+  // Verificamos que el cursor sigue en 102
+  assert.equal(lista.obtenerActual().id, 102);
   assert.equal(lista.avanzar().id, 150);
+
+  // Verificamos que el cursor se mueve correctamente
   assert.equal(lista.avanzar().id, 103);
+
+  //Probamos que el retroceso funciona correctamente
+  assert.equal(lista.retroceder().id, 150);
+  assert.equal(lista.retroceder().id, 102);
 });
 });
 
