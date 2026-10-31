@@ -16,5 +16,10 @@
     "grupo-4"
   ],
   "author": "Grupo 4 - Computación Tercer Ciclo UNL",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freddyordonez/Portafolio-de-Estructura-de-Datos.git"
+  }
 }
+
