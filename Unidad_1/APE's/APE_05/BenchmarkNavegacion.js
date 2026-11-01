@@ -43,4 +43,3 @@ console.timeEnd('Tiempo Pila Transaccional O(1)');
 const memFinalPila = process.memoryUsage().heapUsed;
 const deltaMemPila = ((memFinalPila - memInicialPila) / 1024 / 1024).toFixed(2);
 console.log(`Impacto de Memoria Heap Pila: ${deltaMemPila} MB\n`);
-.
