@@ -8,6 +8,10 @@ class NodoDoble {
     this.prev = null;   // Referencia al nodo anterior
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Freddy_Ordonez
 /**
  * Estructura de Datos Dinámica Doblemente Enlazada.
  */
@@ -17,6 +21,10 @@ class ListaDoblementeEnlazada {
     this.tail = null;
     this.longitud = 0;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Freddy_Ordonez
   /**
    * Inserta un nuevo elemento al final de la lista.
    * Complejidad Temporal: O(1)
@@ -34,6 +42,10 @@ class ListaDoblementeEnlazada {
     this.longitud++;
     return nuevoNodo;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Freddy_Ordonez
   /**
    * Elimina el último elemento de la lista.
    * Complejidad Temporal: O(1)
@@ -53,4 +65,9 @@ class ListaDoblementeEnlazada {
     return nodoEliminado.datos;
   }
 }
+<<<<<<< HEAD
 module.exports = { NodoDoble, ListaDoblementeEnlazada };
+=======
+
+module.exports = { NodoDoble, ListaDoblementeEnlazada };
+>>>>>>> Freddy_Ordonez
