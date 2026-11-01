@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> Freddy_Ordonez
+
+
 const PilaTransaccional = require('./PilaTransaccional');
 
 function obtenerMemoriaMB() {
@@ -45,8 +44,8 @@ for (let i = 0; i < N; i++) {
 console.timeEnd('Tiempo Pila Transaccional O(1)');
 const memFinalPila = process.memoryUsage().heapUsed;
 const deltaMemPila = ((memFinalPila - memInicialPila) / 1024 / 1024).toFixed(2);
-<<<<<<< HEAD
+
 console.log(`Impacto de Memoria Heap Pila: ${deltaMemPila} MB\n`);
-=======
+
 console.log(`Impacto de Memoria Heap Pila: ${deltaMemPila} MB\n`);
->>>>>>> Freddy_Ordonez
+
