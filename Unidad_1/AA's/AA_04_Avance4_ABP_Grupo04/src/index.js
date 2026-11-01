@@ -51,6 +51,13 @@ function iniciarSistema() {
   console.log('Destino anterior:', historialBusqueda.retroceder());
   
   console.log('\n[Sistema] Ejecución de demostración completada con éxito.');
+
+ // Demostración de los nuevos métodos de utilidad
+  console.log('\n--- Probando Métodos de Utilidad ---');
+  console.log('Total de elementos en el historial:', historialBusqueda.getLongitud());
+  console.log('¿La lista está vacía?:', historialBusqueda.estaVacia());
+  console.log('Buscando elemento con ID 1:', historialBusqueda.buscarPorId(1));
+  
 }
 
 // Ejecutar simulación
