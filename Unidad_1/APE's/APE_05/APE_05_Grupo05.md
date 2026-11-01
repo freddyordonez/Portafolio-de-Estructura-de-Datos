@@ -61,9 +61,9 @@ Los resultados muestran una diferencia muy grande entre ambas estructuras. Mient
 
 <img width="1089" height="640" alt="imagen" src="https://github.com/user-attachments/assets/33373587-2ec8-4910-8bbe-f0981716e947" />
 
-Figura 1. Gráfico de barras comparativo entre el Array nativo y la Pila Transaccional.
+*Figura 1. Gráfico de barras comparativo entre el Array nativo y la Pila Transaccional.*
 
-Explicación de la Figura 1:
+**Explicación de la Figura 1:**
 
 La gráfica muestra una diferencia considerable en el tiempo de ejecución de las dos estructuras. El Array nativo, utilizando unshift() y shift(), tardó aproximadamente 358 segundos (5 minutos y 57 segundos) en completar las 500.000 operaciones. En cambio, la Pila Transaccional, mediante push() y pop(), realizó las mismas operaciones en aproximadamente 92,759 milisegundos (0,093 segundos).
 
