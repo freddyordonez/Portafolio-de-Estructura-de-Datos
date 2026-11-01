@@ -34,24 +34,25 @@ Proximamente
 
 * **Tarea 1 (Lista Doblemente Enlazada):** Creación de `ListaDoble.js`, implementando los nodos con referencias `next` y `prev`. Se utilizaron los punteros `head` y `tail` para facilitar la inserción y eliminación de elementos en los extremos en `tiempo O(1).`
 
-* **Tarea 2 (Forzado del Recolector de Basura):** Implementación de `lab03_gc_force.js` utilizando la bandera `--expose-gc` para invocar manualmente `global.gc()` dentro del ciclo iterativo, demostrando que la RAM sigue creciendo de forma idéntica porque la referencia global mantiene los objetos marcados como "en uso" por el algoritmo *Mark-and-Sweep*.
+* **Tarea 2 (Forzado del Recolector de Basura):** Implementación de `PilaTransaccional.js` utilizando la Lista Doblemente Enlazada como estructura interna. Se desarrollaron las operaciones `push()` y `pop()` para agregar y retirar operaciones siguiendo el principio `LIFO (Last In, First Out)`, aprovechando la inserción y eliminación al final de la lista con una `complejidad temporal de O(1).`
 
 * **Tarea 3 (Benchmark de rendimiento):** Creación de `BenchmarkNavegacion.js` para comparar *500.000* operaciones entre un **Array Nativo** utilizando `unshift()` y `shift()` y la **PilaTransaccional** mediante `push()` y `pop()`. El experimento permitió comparar el tiempo de ejecución y el consumo de memoria `Heap` de ambas implementaciones.
 
 ### 2. Resultados Experimentales y Tabulación
-La comparación entre la ejecución con pérdida de memoria y la solución controlada refleja el comportamiento del Heap:
+
+La comparación entre el **Array nativo y la Pila Transaccional** permite observar diferencias importantes en el tiempo de ejecución al realizar *500.000 operaciones*. Los resultados obtenidos muestran que la estructura basada en la Lista Doblemente Enlazada permite realizar las operaciones de inserción y extracción de manera mucho más eficiente.
 ### 3. Comparación de Resultados
 
-| Estructura | Operaciones | Tiempo de ejecución |
-|---|---:|---:|
-| Array nativo (`unshift/shift`) | 500.000 | 5:57.907 min |
-| Pila Transaccional (`push/pop`) | 500.000 | 92.759 ms |
+| Estructura | Operaciones | Tiempo de ejecución |Interpretacion|
+|---|---:|---:|---:|
+| Array nativo (`unshift/shift`) | 500.000 | 5:57.907 min |Es mas lenta en el procesamiento, debido a que tiene que mover muchos elementos|
+| Pila Transaccional (`push/pop`) | 500.000 | 92.759 ms |Es mucho mas rapida y consume menos recurso|
 
 **Explicación de los resultados:**
 
-- **Array nativo:** Para realizar las 500.000 operaciones utilizando `unshift()` y `shift()`, el programa tardó aproximadamente **5 minutos y 57 segundos**. Esto ocurre porque estas operaciones pueden requerir mover los elementos del arreglo, haciendo que el procesamiento sea más lento a medida que aumenta la cantidad de datos.
+**Array nativo:** Para realizar las 500.000 operaciones utilizando `unshift()` y `shift()`, el programa tardó aproximadamente 5 minutos y 57 segundos. Esto se debe a que estas operaciones pueden requerir el desplazamiento de los elementos del arreglo, por lo que el tiempo de procesamiento aumenta cuando la cantidad de datos es mayor.
 
-- **Pila Transaccional:** Con `push()` y `pop()`, la Pila Transaccional realizó las mismas **500.000 operaciones en aproximadamente 92.759 milisegundos**. Al utilizar la Lista Doblemente Enlazada, puede trabajar directamente sobre el extremo de la estructura sin desplazar los demás elementos, manteniendo una complejidad de **O(1)**.
+**Pila Transaccional:** Utilizando `push()` y `pop()`, la Pila Transaccional realizó las mismas 500.000 operaciones en aproximadamente 92.759 milisegundos. Al utilizar una Lista Doblemente Enlazada, puede trabajar directamente sobre el extremo de la estructura sin desplazar los demás elementos, manteniendo una complejidad temporal de O(1).
 
 ### 3. Análisis Técnico y de Arquitectura (ABI)
 * Los resultados muestran una diferencia muy grande entre ambas estructuras. Mientras el Array nativo necesitó casi **6 minutos**, la Pila Transaccional completó el mismo trabajo en aproximadamente **0,093 segundos**. Esto demuestra que, para este tipo de operaciones, la estructura enlazada ofrece un rendimiento considerablemente mayor.
@@ -59,12 +60,14 @@ La comparación entre la ejecución con pérdida de memoria y la solución contr
 ### 4. Gráfico Comparativo
 
 <img width="1089" height="640" alt="imagen" src="https://github.com/user-attachments/assets/33373587-2ec8-4910-8bbe-f0981716e947" />
-Figura 1. `Gráfico de Barras Comparativo entre Array nativo y Pila Transaccional` 
 
+Figura 1. Gráfico de barras comparativo entre el Array nativo y la Pila Transaccional.
 
-- **Explicación de la gráfica de la figura 1:**
+Explicación de la Figura 1:
 
-Se observa una gran diferencia entre las dos estructuras. El Array nativo necesitó aproximadamente 358 segundos, mientras que la PilaTransaccional realizó las mismas operaciones en aproximadamente 0,093 segundos. Esto demuestra que el uso de una estructura enlazada permite realizar estas operaciones de manera mucho más rápida.
+La gráfica muestra una diferencia considerable en el tiempo de ejecución de las dos estructuras. El Array nativo, utilizando unshift() y shift(), tardó aproximadamente 358 segundos (5 minutos y 57 segundos) en completar las 500.000 operaciones. En cambio, la Pila Transaccional, mediante push() y pop(), realizó las mismas operaciones en aproximadamente 92,759 milisegundos (0,093 segundos).
+
+Esto demuestra que la Pila Transaccional presenta un mejor rendimiento para este tipo de operaciones, ya que puede insertar y eliminar elementos directamente desde el extremo de la estructura sin necesidad de desplazar los demás elementos.
 
 ### 5. Preguntas de Control (Resumen Conceptual)
 1. **En el contexto de las estructuras de datos dinámicas, ¿cuál es la "sustancia" de un nodo en una Lista Doblemente Enlazada en comparación con la de una celda de un arreglo contiguo, y cómo modifica el puntero anterior (prev) su naturaleza constitutiva?**
