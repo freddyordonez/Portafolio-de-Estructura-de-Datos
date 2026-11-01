@@ -27,7 +27,7 @@ Proximamente
 
 ---
 
-## 🔍 Resumen y Desarrollo de la Práctica (APE-03)
+## 🔍 Resumen y Desarrollo de la Práctica (APE-05)
 
 ### 1. Enfoque del Problema y Tareas Realizadas
 * **Contexto ABP/ABI:** Se implementó una estructura de Lista Doblemente Enlazada y una Pila Transaccional para manejar un historial de operaciones y permitir una navegación eficiente hacia adelante y hacia atrás. El objetivo fue comparar su rendimiento frente al uso de un arreglo nativo de JavaScript.
@@ -55,7 +55,8 @@ La comparación entre el **Array nativo y la Pila Transaccional** permite observ
 **Pila Transaccional:** Utilizando `push()` y `pop()`, la Pila Transaccional realizó las mismas 500.000 operaciones en aproximadamente 92.759 milisegundos. Al utilizar una Lista Doblemente Enlazada, puede trabajar directamente sobre el extremo de la estructura sin desplazar los demás elementos, manteniendo una complejidad temporal de O(1).
 
 ### 3. Análisis Técnico y de Arquitectura (ABI)
-* Los resultados muestran una diferencia muy grande entre ambas estructuras. Mientras el Array nativo necesitó casi **6 minutos**, la Pila Transaccional completó el mismo trabajo en aproximadamente **0,093 segundos**. Esto demuestra que, para este tipo de operaciones, la estructura enlazada ofrece un rendimiento considerablemente mayor.
+
+Los resultados muestran una diferencia muy grande entre ambas estructuras. Mientras el Array nativo necesitó casi **6 minutos**, la Pila Transaccional completó el mismo trabajo en aproximadamente **0,093 segundos**. Esto demuestra que, para este tipo de operaciones, la estructura enlazada ofrece un rendimiento considerablemente mayor.
 
 ### 4. Gráfico Comparativo
 
