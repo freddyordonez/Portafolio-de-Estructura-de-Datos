@@ -122,4 +122,5 @@ class ListaDobleNavegacion {
     this.longitud = 0;
   }
 }
+
 module.exports = ListaDobleNavegacion;
