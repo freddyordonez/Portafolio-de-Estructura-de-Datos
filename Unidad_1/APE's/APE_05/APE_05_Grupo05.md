@@ -76,8 +76,8 @@ Esto demuestra que la Pila Transaccional presenta un mejor rendimiento para este
 
 3. **¿Cuál es el fin último (telos) de la navegación bidireccional en un historial de operaciones o sistema de transacciones Undo/Redo, y en qué medida optimiza la estabilidad energética del sistema de cómputo?**
 
-El objetivo de la navegación bidireccional es poder avanzar y retroceder fácilmente en el historial de operaciones, como cuando usamos Undo y Redo. Los punteros next y prev permiten moverse en ambas direcciones sin tener que mover todos los elementos.
-Esto hace que el programa trabaje más rápido y use menos recursos. En la prueba de 500.000 operaciones, se pudo notar una gran diferencia: el arreglo con unshift() y shift() tardó casi 6 minutos, mientras que la PilaTransaccional realizó las mismas operaciones en solo unos 93 milisegundos. Esto demuestra que la pila es mucho más rápida y que la CPU necesita trabajar durante menos tiempo, aprovechando mejor los recursos del computador.
+   El objetivo de la navegación bidireccional es poder avanzar y retroceder fácilmente en el historial de operaciones, como cuando usamos Undo y Redo. Los punteros next y prev permiten moverse en ambas direcciones sin tener que mover todos los elementos.
+   Esto hace que el programa trabaje más rápido y use menos recursos. En la prueba de 500.000 operaciones, se pudo notar una gran diferencia: el arreglo con unshift() y shift() tardó casi 6 minutos, mientras que la PilaTransaccional realizó las mismas operaciones en solo unos 93 milisegundos. Esto demuestra que la pila es mucho más rápida y que la CPU necesita trabajar durante menos tiempo, aprovechando mejor los recursos del computador.
 
 4. **Aristóteles sostenía que nada existe sin una forma y materia dada. Si para ganar flexibilidad bidireccional se requiere duplicar las referencias de memoria prev y next, ¿cuándo deja el gasto de memoria Heap de ser una virtud de diseño para convertirse en un exceso ontológico (overhead)?**
 
