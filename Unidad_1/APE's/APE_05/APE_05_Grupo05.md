@@ -41,10 +41,9 @@ Proximamente
 ### 2. Resultados Experimentales y Tabulación
 
 La comparación entre el **Array nativo y la Pila Transaccional** permite observar diferencias importantes en el tiempo de ejecución al realizar *500.000 operaciones*. Los resultados obtenidos muestran que la estructura basada en la Lista Doblemente Enlazada permite realizar las operaciones de inserción y extracción de manera mucho más eficiente.
-### 3. Comparación de Resultados
 
 | Estructura | Operaciones | Tiempo de ejecución |Interpretacion|
-|---|---:|---:|---:|
+|---|---:|---:|---|
 | Array nativo (`unshift/shift`) | 500.000 | 5:57.907 min |Es mas lenta en el procesamiento, debido a que tiene que mover muchos elementos|
 | Pila Transaccional (`push/pop`) | 500.000 | 92.759 ms |Es mucho mas rapida y consume menos recurso|
 
