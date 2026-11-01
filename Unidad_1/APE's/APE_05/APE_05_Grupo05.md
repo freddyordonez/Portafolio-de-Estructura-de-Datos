@@ -1,6 +1,6 @@
 # 📂 Listas Doblemente Enlazadas y Pilas: Navegación Bidireccional y Gestión LIFO de Mínimo Costo Energético - Práctica Experimental 05 (APE-05)
 
-Este directorio centraliza la documentación oficial y el desarrollo práctico de la **Práctica Experimental 05** del **Grupo 4**, enfocada en el mapeo de referencias en memoria, la simulación y auditoría de fugas de memoria (*Memory Leaks*), el forzado del Recolector de Basura (*Garbage Collector*) y la aplicación de principios de *Green Computing* en JavaScript (motor V8).
+Este directorio centraliza la documentación oficial y el desarrollo práctico de la Práctica Experimental 05 del Grupo 4, enfocada en el diseño e implementación de una Lista Doblemente Enlazada y una Pila Transaccional para permitir la navegación bidireccional y la gestión de operaciones mediante el principio LIFO. Además, se realiza una comparación experimental del tiempo de ejecución y el uso de recursos frente a los arreglos nativos de JavaScript, considerando los principios de Green Computing y la eficiencia en el uso de los recursos del sistema.
 
 ---
 
