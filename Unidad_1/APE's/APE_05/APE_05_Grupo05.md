@@ -40,19 +40,22 @@ Proximamente
 
 ### 2. Resultados Experimentales y Tabulación
 La comparación entre la ejecución con pérdida de memoria y la solución controlada refleja el comportamiento del Heap:
+### 3. Comparación de Resultados
 
-| Iteración | Fuga de Memoria (`lab03_memory_leak.js`) | Solución Controlada $O(1)$ (`lab03_solucion.js`) | Análisis del Comportamiento Espacial |
-| :--- | :--- | :--- | :--- |
-| **200** | 157 MB | 157 MB | Comportamiento inicial idéntico mientras se llena el umbral inicial de la estructura. |
-| **400** | 233 MB | 133 MB | La solución comienza a estabilizarse gracias a la liberación de los elementos más antiguos. |
-| **600** | 310 MB (Estimado) | 95 MB | El Recolector de Basura actúa de forma efectiva; la RAM desciende y se mantiene regulada. |
-| **800** | 386 MB (Estimado) | 58 MB | Se evidencia claramente el tope (*Green Computing*); el sistema no sufre desbordamientos. |
-| **1000** | 460+ MB (Colapso inminente) | 210 MB (Estable en techo) | Mientras la fuga satura el servidor de forma infinita ($O(n)$), la solución optimizada estabiliza el consumo en un rango seguro y constante ($O(1)$). |
+| Estructura | Operaciones | Tiempo de ejecución |
+|---|---:|---:|
+| Array nativo (`unshift/shift`) | 500.000 | 5:57.907 min |
+| Pila Transaccional (`push/pop`) | 500.000 | 92.759 ms |
+
+**Explicación de los resultados:**
+
+- **Array nativo:** Para realizar las 500.000 operaciones utilizando `unshift()` y `shift()`, el programa tardó aproximadamente **5 minutos y 57 segundos**. Esto ocurre porque estas operaciones pueden requerir mover los elementos del arreglo, haciendo que el procesamiento sea más lento a medida que aumenta la cantidad de datos.
+
+- **Pila Transaccional:** Con `push()` y `pop()`, la Pila Transaccional realizó las mismas **500.000 operaciones en aproximadamente 92.759 milisegundos**. Al utilizar la Lista Doblemente Enlazada, puede trabajar directamente sobre el extremo de la estructura sin desplazar los demás elementos, manteniendo una complejidad de **O(1)**.
 
 ### 3. Análisis Técnico y de Arquitectura (ABI)
-* **Algoritmo Mark-and-Sweep:** El motor V8 determina qué datos eliminar basándose en la accesibilidad desde la raíz (*root*). Al existir referencias activas en el ámbito global, los objetos no pueden ser barridos aunque se invoque el GC manualmente.
+* Los resultados muestran una diferencia muy grande entre ambas estructuras. Mientras el Array nativo necesitó casi **6 minutos**, la Pila Transaccional completó el mismo trabajo en aproximadamente **0,093 segundos**. Esto demuestra que, para este tipo de operaciones, la estructura enlazada ofrece un rendimiento considerablemente mayor.
 
-* **Optimización Espacial $O(1)$:** Al desvincular los nodos obsoletos mediante un límite estricto y un enfoque cíclico, se rompe la cadena de retención, permitiendo que el recolector de basura recupere los bloques de memoria dinámica de manera eficiente.
 
 ### 4. Preguntas de Control (Resumen Conceptual)
 1. **Causa Material:** La estructura principal de un objeto complejo se asienta en el **Heap** por su tamaño dinámico e impredecible, mientras que el puntero o variable de referencia que lo enlaza se ubica en el **Stack** dentro del marco de ejecución activo.
