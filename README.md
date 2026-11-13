@@ -48,8 +48,8 @@
 * 🎯 [Objetivo](#-objetivo)
 * 📂 [Estructura del repositorio](#-estructura-del-repositorio)
 * 📁 [Organización de los trabajos](#-organización-de-los-trabajos)
+* 🚀 [Avance del Proyecto](#-avance-del-proyecto-avance-4---abp)
 * 📊 [Convenciones de organización](#-convenciones-de-organización)
-
 ---
 
 ## 🎯 Objetivo
@@ -106,6 +106,30 @@ Carpeta destinada a las actividades prácticas y experimentales:
 📂 [Explorar actividades prácticas](./Unidad_1/APE's)
 
 ---
+---
+
+## 🚀 Avance del Proyecto (Avance 4 - ABP)
+
+En esta sección se encuentra la implementación del proyecto correspondiente al avance de la unidad, enfocado en el módulo de navegación bidireccional y la estructura de datos orientada a listas y nodos enlazados.
+
+📁 [Acceder a la carpeta del Avance 4 (AA_04_Avance4_ABP_Grupo04)](./Unidad_1/AA's/AA_04_Avance4_ABP_Grupo04)
+
+### Estructura de archivos del proyecto:
+
+```text
+AA_04_Avance4_ABP_Grupo04/
+│
+├── src/
+│   ├── models/
+│   │   ├── ListaDobleNavegacion.js
+│   │   └── NodoDoble.js
+│   └── index.js
+│
+├── tests/
+│   └── navegacion.test.js
+│
+└── package.json
+```
 
 ## 📊 Convenciones de organización
 
