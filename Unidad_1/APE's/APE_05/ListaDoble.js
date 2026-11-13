@@ -19,6 +19,8 @@ class ListaDoblementeEnlazada {
     this.longitud = 0;
   }
 
+
+
   /**
    * Inserta un nuevo elemento al final de la lista.
    * Complejidad Temporal: O(1)
