@@ -43,7 +43,7 @@ class GestorOrdenamientoTransaccional {
   }
 
   /**
-   * Estrategia B: Re-procesamiento completo mediante ordenamiento O(N log N)..
+   * Estrategia B: Re-procesamiento completo mediante ordenamiento O(N log N).
    */
   reprocesarOrdenamientoCompleto() {
     this.registros.sort((a, b) => a.watts - b.watts);
