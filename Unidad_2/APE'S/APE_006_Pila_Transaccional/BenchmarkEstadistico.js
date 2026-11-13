@@ -62,7 +62,7 @@ const estReproc = calcularEstadisticas(tiemposReprocesamiento);
 const ahorro = ((1 - estPila.mediaNum / estReproc.mediaNum) * 100).toFixed(2);
 
 console.log(`=== ANÁLISIS ESTADÍSTICO COMPARATIVO (N=${N}, m=${M_MUTACIONES}, k=${K_REPLICAS}) ===`);
-console.table([
+console.table([.
   {
     Estrategia: 'Pila Transaccional LIFO O(m)',
     'Media (ms)': estPila.media,
