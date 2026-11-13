@@ -16,10 +16,7 @@ class PilaTransaccional {
   push(comando) {
     this.lista.insertarFinal(comando);
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> Freddy_Ordonez
   /**
    * Desapila y retorna el comando en el tope (Undo).
    * Complejidad Temporal: O(1)
@@ -36,8 +33,4 @@ class PilaTransaccional {
   }
 }
 
-<<<<<<< HEAD
 module.exports = PilaTransaccional;
-=======
-module.exports = PilaTransaccional;
->>>>>>> Freddy_Ordonez

@@ -8,6 +8,7 @@ class NodoDoble {
     this.prev = null;   // Referencia al nodo anterior
   }
 }
+
 /**
  * Estructura de Datos Dinámica Doblemente Enlazada.
  */
@@ -17,6 +18,9 @@ class ListaDoblementeEnlazada {
     this.tail = null;
     this.longitud = 0;
   }
+
+
+
   /**
    * Inserta un nuevo elemento al final de la lista.
    * Complejidad Temporal: O(1)
@@ -34,6 +38,7 @@ class ListaDoblementeEnlazada {
     this.longitud++;
     return nuevoNodo;
   }
+
   /**
    * Elimina el último elemento de la lista.
    * Complejidad Temporal: O(1)
@@ -53,4 +58,5 @@ class ListaDoblementeEnlazada {
     return nodoEliminado.datos;
   }
 }
+
 module.exports = { NodoDoble, ListaDoblementeEnlazada };
